@@ -11,15 +11,7 @@ import GoogleLogin from "react-google-login";
 
 
 import {BrowserRouter as Router,Switch,Route, Link} from "react-router-dom";
-const { Pool, Client } = require("pg");
 
-const pool = new Pool({
-  user: "victorv",
-  host: "34.66.68.89",
-  database: "Rufo",
-  password: "velasco1.",
-  port: "5432"
-});
 function App() {
   const {isAuthenticated} = useAuth0();
   const respuestaFacebook= (respuesta)=>{
@@ -69,7 +61,7 @@ function App() {
           <button className="button btn-normal" >Iniciar Sesión</button>
           <br> 
           </br>
-          <button onClick={paginaRegistrarse}>Registrate</button>
+          <button >Registrate</button>
           <br></br>
           <br></br>
           <FacebookLogin
@@ -95,7 +87,7 @@ function App() {
             <label>Correo Electronico</label><br />
             <input type="text" correo="title" className="input" />
           </p>
-          <button onClick={paginaRegistrarse}>Registrate</button>
+          <button>Registrate</button>
 
 
 
@@ -111,37 +103,7 @@ function App() {
   );
 }
 
-function paginaRegistrarse(){
-  return(
-    <Link path="/about">
-            <About />
-          </Link>
-  );
-}
 
-function Home() {
-  return (
-    <div>
-      <h2>Home</h2>
-    </div>
-  );
-}
-
-function About() {
-  return (
-    <div>
-      <h2>About</h2>
-    </div>
-  );
-}
-
-function Dashboard() {
-  return (
-    <div>
-      <h2>Dashboard</h2>
-    </div>
-  );
-}
 
 
 
