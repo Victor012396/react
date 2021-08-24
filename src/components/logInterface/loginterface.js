@@ -1,6 +1,6 @@
 import {Form} from "react-bootstrap";
 import {Button} from "react-bootstrap";
-function Login(){
+function LogInterface(){
     return(
         <form className="App-form" >
           <p>
@@ -21,4 +21,4 @@ function Login(){
     );
 }
 
-export default Login;
+export default LogInterface;

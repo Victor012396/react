@@ -1,8 +1,8 @@
 import {Navbar} from "react-bootstrap";
 import React, {useState, useEffect} from 'react';
 import { Link, Router } from 'react-router-dom';
-import { Button } from '../navbar/button/button.js';
-import './navbar.css';
+import { Button } from '../navbarLogin/button/button.js';
+import '../navbarLogin/navbarLogin.css';
 
 function NavbarLogin(){
   const [click, setClick] = useState(false);
@@ -43,12 +43,17 @@ function NavbarLogin(){
                     </div>
                     <ul className={click ? 'nav-menu active' : 'nav-menu'}>
                         <li className='nav-item'>
-                            <Link to='/LogIn' className='nav-links' onClick={closeMobileMenu}>
+                            <Link to='/log-in' className='nav-links' onClick={closeMobileMenu}>
                                 LogIn
                             </Link>
                         </li>
+                        <li className='nav-item'>
+                            <Link to='/sign-up' className='nav-links' onClick={closeMobileMenu}>
+                                SignIn
+                            </Link>
+                        </li>
                     </ul>
-                    {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>}
+                   
 
                 </div>
             </nav>
